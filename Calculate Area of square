@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+int side,area;
+
+printf("Enter the length of size:");
+scanf("%d",& side);
+
+area=side*side;
+printf("\n area of square:%d", area);
+
+return 0;
+}
