@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+// Function to calculate compound interest
+double calculateCompoundInterest(double principal, double rate, int time) {
+    // Formula for compound interest: A = P * (1 + r/n)^(nt)
+    // For simplicity, assuming interest is compounded annually, n = 1
+    return principal * pow((1 + rate / 100), time);
+}
+
+int main() {
+    double principal, rate, amount;
+    int time;
+
+    // Input principal, rate of interest, and time period
+    printf("Enter the principal amount:
