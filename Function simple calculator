@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+// Function to perform the operation based on the user's choice
+double calculate(double num1, double num2, char operator) {
+    switch (operator) {
+        case '+':
+            return num1 + num2;  // Addition
+        case '-':
+            return num1 - num2;  // Subtraction
+        case '*':
+            return num1 * num2;  // Multiplication
+        case '/':
+            if (num2 != 0) {
+                return num1 / num2;  // Division
+            } else {
+                printf("Error! Division by zero.\n");
+                return 0;  // Return 0 if division by zero is attempted
+            }
+        default:
+            printf("Error! Invalid operator.\n");
+            return 0;  // Return 0 for invalid operator
+    }
+}
+
+int main() {
+    double num1, num2, result;
+    char operator;
+
+    // Input the first number, operator, and second number
+    printf("Enter first number: ");
+    scanf("%lf", &num1);
+
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);  // Space before %c to capture any leftover newline
+
+    printf("Enter second number: ");
+    scanf("%lf", &num2);
+
+    // Call the function to perform the calculation
+    result = calculate(num1, num2, operator);
+
+    // Display the result
+    printf("Result: %.2lf\n", result);
+
+    return 0;
+}
