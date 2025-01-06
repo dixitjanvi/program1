@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// Function to print the left half pyramid
+void printLeftHalfPyramid(int rows) {
+    for (int i = 1; i <= rows; i++) {  // Loop for rows
+        for (int j = 1; j <= i; j++) { // Loop for printing stars in each row
+            printf("* ");
+        }
+        printf("\n"); // Move to the next line after each row
+    }
+}
+
+int main() {
+    int rows;
+
+    // Input number of rows
+    printf("Enter the number of rows for the pyramid: ");
+    scanf("%d", &rows);
+
+    // Call the function to print the pyramid
+    printLeftHalfPyramid(rows);
+
+    return 0;
+}
