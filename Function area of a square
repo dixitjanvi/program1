@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Function to calculate the area of a square
+float calculate Area(float side) {
+    return side * side;
+}
+
+int main() {
+    float side, area;
+
+    // Input side length of the square
+    printf("Enter the side length of the square: ");
+    scanf("%f", &side);
+
+    // Call the function to calculate the area
+    area = calculate Area(side);
+
+    // Display the result
+    printf("The area of the square is: %.2f\n", area);
+
+    return 0;
+}
