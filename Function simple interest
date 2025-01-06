@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Function to calculate simple interest
+double calculateSimpleInterest(double principal, double rate, int time) {
+    // Formula for simple interest: SI = (P * R * T) / 100
+    return (principal * rate * time) / 100;
+}
+
+int main() {
+    double principal, rate, simpleInterest;
+    int time;
+
+    // Input principal, rate of interest, and time period
+    printf("Enter the principal amount: ");
+    scanf("%lf", &principal);
+
+    printf("Enter the rate of interest: ");
+    scanf("%lf", &rate);
+
+    printf("Enter the time period (in years): ");
+    scanf("%d", &time);
+
+    // Call the function to calculate simple interest
+    simpleInterest = calculateSimpleInterest(principal, rate, time);
+
+    // Display the result (Simple Interest)
+    printf("The simple interest is: %.2lf\n", simpleInterest);
+    printf("The total amount after %d years is: %.2lf\n", time, principal + simpleInterest);
+
+    return 0;
+}
